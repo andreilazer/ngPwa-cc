@@ -13,7 +13,7 @@
       <p matLine>
         <span>{{currentRecipe.description}}</span>
       </p>
-      <img [src]="currentRecipe.photoUrl">
+      <img [src]="currentRecipe.photoUrl" (error)="getNoImage($event)">
     </div>
   </mat-card-content>
 </mat-card>

@@ -28,4 +28,12 @@ export class RecipeListComponent implements OnInit {
   previous() {
     this.currentIndex--;
   }
+
+  getNoImage(event: any) {
+    const src = './assets/no-image-icon.png';
+    if (event) {
+      event.target.src = src;
+    }
+    return src;
+  }
 }

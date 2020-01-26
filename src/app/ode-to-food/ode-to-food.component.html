@@ -1,24 +1,25 @@
 <mat-card>
   <mat-card-header>
     <mat-icon mat-card-avatar>grade</mat-icon>
-    <mat-card-title>Tweets</mat-card-title>
-    <mat-card-subtitle>Choose between your timeline or favorites</mat-card-subtitle>
+    <mat-card-title>Ode to food</mat-card-title>
+    <mat-card-subtitle>In memory of K. Scott Allen</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
     <button mat-button color="accent" (click)="loadTimeLine()">
-      <mat-icon>list</mat-icon>Load my timeline
+      <mat-icon>restaurant_menu</mat-icon>Latest recipes
     </button>
     <button mat-button color="accent" (click)="loadFavorites()">
-      <mat-icon>favorite</mat-icon>Load my favorites
+      <mat-icon>menu_book</mat-icon>Grandma's cookbook
     </button>
   </mat-card-actions>
   <mat-card-content>
 
-    <div *ngIf="tweets$ | async; else loading; let tweets">
+    <div *ngIf="recipes$ | async let recipes; else loading">
 
-      <app-tweet-list [tweets]="tweets"></app-tweet-list>
+      <app-recipe-list [recipes]="recipes"></app-recipe-list>
 
     </div>
+
 
     <ng-template #loading>
       <mat-progress-bar mode="indeterminate" *ngIf="isInteractionStarted"></mat-progress-bar>

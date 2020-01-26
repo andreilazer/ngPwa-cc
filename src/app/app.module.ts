@@ -10,8 +10,8 @@ import { MaterialModule } from './material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppShellUpdateComponent } from './app-shell-update/app-shell-update.component';
-import { TweetListComponent } from './tweet-list/tweet-list.component';
-import { TweetFeedsComponent } from './tweet-feeds/tweet-feeds.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { OdeToFoodComponent } from './ode-to-food/ode-to-food.component';
 
 import { PushSubscriptionComponent } from './push-subscription/push-subscription.component';
 import { CachedRouteComponent } from './cached-route/cached-route.component';
@@ -21,8 +21,8 @@ import { NonCachedRouteComponent } from './non-cached-route/non-cached-route.com
   declarations: [
     NavigationComponent,
     DashboardComponent,
-    TweetListComponent,
-    TweetFeedsComponent,
+    RecipeListComponent,
+    OdeToFoodComponent,
     PushSubscriptionComponent,
     AppShellUpdateComponent,
     CachedRouteComponent,

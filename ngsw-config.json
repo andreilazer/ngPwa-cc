@@ -10,11 +10,13 @@
           "/favicon.ico",
           "/index.html",
           "/manifest.webmanifest",
+          "/assets/no-image-icon.png",
           "/*.css",
           "/*.js"
         ]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
@@ -33,6 +35,42 @@
           "https://fonts.gstatic.com/**"
         ]
       }
+    },
+    {
+      "name": "photos",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "urls": [
+          "**/recipes-phots/**"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "new-recipes",
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "strategy": "freshness",
+        "timeout": "10s"
+      },
+      "urls": [
+        "**/latest-recipes"
+      ]
+    },
+    {
+      "name": "grandma-cookbook",
+      "cacheConfig": {
+        "maxAge": "3d",
+        "maxSize": 10,
+        "strategy": "performance",
+        "timeout": "10s"
+      },
+      "urls": [
+        "**/grandmas-cookbook"
+      ]
     }
   ]
 }

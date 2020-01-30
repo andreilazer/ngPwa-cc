@@ -17,28 +17,18 @@ export class PushSubscriptionService {
   ) {
     this.pushSubscriptionUrl = `${this.configService.get(
       'PUSH_API_URL'
-    )}/webpush`;
+    )}/api/PushSubscriptions`;
   }
 
   addSubscriber(subscription): Observable<any> {
     console.log('[Push Subscription Service] Adding subscriber');
 
-    let body = {
-      action: 'subscribe',
-      subscription: subscription
-    };
-
-    return this.apiService.callApi(this.pushSubscriptionUrl, 'POST', body);
+    return this.apiService.callApi(this.pushSubscriptionUrl, 'POST', subscription);
   }
 
   deleteSubscriber(subscription): Observable<any> {
     console.log('[Push Subscription Service] Deleting subscriber');
 
-    let body = {
-      action: 'unsubscribe',
-      subscription: subscription
-    };
-
-    return this.apiService.callApi(this.pushSubscriptionUrl, 'POST', body);
+    return this.apiService.callApi(this.pushSubscriptionUrl + '/subscription.endpoint', 'DELETE');
   }
 }

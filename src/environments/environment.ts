@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   config: {
-    "DATA_API_URL": "https://angularpwaserver.azurewebsites.net",
-    "PUSH_API_URL": "",
-    "VAPID_PUBLIC_KEY": ""
+    "DATA_API_URL": "https://localhost:44311",
+    "PUSH_API_URL": "http://localhost:44311",
+    "VAPID_PUBLIC_KEY": "BK6sMkFnpcWysed03xlAL5bZGep55rISWF4L6QdeM68r4aooJYJWstY-KJnfk7VsXs2d3_k8Z8kr87sBj4MIYsg"
   }
 };
 

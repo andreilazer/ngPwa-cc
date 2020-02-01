@@ -16,7 +16,8 @@ import {
   MatTabsModule,
   MatProgressBarModule,
   MatRadioModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatExpansionModule,
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -40,7 +41,8 @@ import 'hammerjs';
     MatTabsModule,
     MatProgressBarModule,
     MatRadioModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule
   ],
   exports: [
     LayoutModule,
@@ -59,7 +61,8 @@ import 'hammerjs';
     MatTabsModule,
     MatProgressBarModule,
     MatRadioModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule {}

@@ -7,7 +7,7 @@ import {
 import { Observable, Subject } from 'rxjs';
 import { map, takeUntil, tap } from 'rxjs/operators';
 import { UpdateService } from '../update.service';
-import { MatSnackBar } from '@angular/material/typings';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-navigation',

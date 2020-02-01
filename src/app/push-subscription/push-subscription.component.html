@@ -1,10 +1,27 @@
 <mat-card>
   <mat-card-content>
-    <p>
-      Push and notification use different, but complementary, APIs: push is invoked when a server supplies information
-      to a service
-      worker; a notification is the action of a service worker or web page script showing information to a user.
-    </p>
+    <mat-accordion >
+      <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Notification protocol
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Push and notification use different, but complementary, APIs: push is invoked when a server supplies information
+          to a service
+          worker; a notification is the action of a service worker or web page script showing information to a user.
+        </p>
+        <img src="./assets/notifications.gif"/>
+        <ol>
+          <li>A device downloads your web app containing an already created publicKey, referred to in scripts as the applicationServerKey. Your web app installs a service worker.</li>
+          <li>During the subscription flow the browser contacts the messaging server to create a new subscription and returns it to the app. Note: You don't need to know the URL of the message server. Each browser vendor manages it's own message server for its browser.</li>
+          <li>After the subscription flow, your app passes a subscription object back to your app server.          </li>
+          <li>At some later point, your app server sends a message to the messaging server, which forwards it to the recipient.          </li>
+        </ol>
+        <a href="https://angular.io/api/service-worker/SwPush#usage-notes">https://angular.io/api/service-worker/SwPush#usage-notes</a>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button (click)="subscribeToPush()">

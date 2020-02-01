@@ -20,7 +20,7 @@ export class PushSubscriptionService {
     )}/api/PushSubscriptions`;
   }
 
-  addSubscriber(subscription): Observable<any> {
+  addSubscriber(subscription: PushSubscription): Observable<any> {
     console.log('[Push Subscription Service] Adding subscriber');
 
     return this.apiService.callApi(this.pushSubscriptionUrl, 'POST', subscription);

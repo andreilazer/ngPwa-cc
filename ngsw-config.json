@@ -72,5 +72,12 @@
         "**/grandmas-cookbook"
       ]
     }
+  ],
+  "navigationUrls": [
+    "/**",
+    "!/**/*.*",
+    "!/**/*__*",
+    "!/**/*__*/**",
+    "!/**/non-cached-route"
   ]
 }

@@ -9,6 +9,13 @@ export class NonCachedRouteComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * By adding
+   * "navigationUrls": [
+   * ".../non-cached-route"
+   * ]
+   * in ngsw-config this route will no longer be controlled by service worker
+   */
   ngOnInit() {
   }
 

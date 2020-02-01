@@ -26,3 +26,8 @@
 .red {
   background-color: red;
 }
+
+.install-button{
+  margin-top: 20px;
+  margin-left: 20px;
+}

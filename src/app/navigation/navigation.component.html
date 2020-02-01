@@ -11,6 +11,7 @@
       <a mat-list-item routerLink="/cached-route">Cached route</a>
       <a mat-list-item routerLink="/non-cached-route">Non-cached route</a>
     </mat-nav-list>
+    <button mat-raised-button class="install-button" (click)="install()" [disabled]="btnInstallDisabled">Install</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">

@@ -16,6 +16,7 @@ import { MatSnackBar } from '@angular/material/typings';
 })
 export class NavigationComponent implements OnDestroy {
   destroy = new Subject();
+  online = this.updateService.online;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

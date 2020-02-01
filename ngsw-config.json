@@ -79,5 +79,8 @@
     "!/**/*__*",
     "!/**/*__*/**",
     "!/**/non-cached-route"
-  ]
+  ],
+  "appData": {
+    "versionMessage": "New version: Important updates"
+  } 
 }

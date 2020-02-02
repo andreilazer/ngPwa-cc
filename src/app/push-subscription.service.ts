@@ -29,6 +29,6 @@ export class PushSubscriptionService {
   deleteSubscriber(subscription): Observable<any> {
     console.log('[Push Subscription Service] Deleting subscriber');
 
-    return this.apiService.callApi(`this.pushSubscriptionUrl/${subscription.endpoint}', 'DELETE');
+    return this.apiService.callApi(`this.pushSubscriptionUrl/${subscription.endpoint}`, 'DELETE');
   }
 }
